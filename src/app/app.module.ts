@@ -9,6 +9,12 @@ import { HeroProfileComponent } from './hero-profile.component';
 import { AdDirective } from './ad.directive';
 import { AdService } from './ad.service';
 import { PrenomComponent } from './prenom/prenom.component';
+import { BookComponent } from './book/book.component';
+import { BookDetailComponent } from './book-detail/book-detail.component';
+import { BookUpdateComponent } from './book-update/book-update.component';
+import { AddbookComponent } from './addbook/addbook.component';
+import { AppRoutingModule } from './app-routing.module';
+import { BookService } from './book/book.service';
 
 @NgModule({
   declarations: [
@@ -18,12 +24,17 @@ import { PrenomComponent } from './prenom/prenom.component';
     HeroJobAdComponent,
     HeroProfileComponent,
     AdDirective,
-    PrenomComponent
+    PrenomComponent,
+    BookComponent,
+    BookDetailComponent,
+    BookUpdateComponent,
+    AddbookComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
-  providers: [AdService],
+  providers: [AdService, BookService],
   entryComponents: [ HeroJobAdComponent, HeroProfileComponent ],
   bootstrap: [AppComponent]
 })
