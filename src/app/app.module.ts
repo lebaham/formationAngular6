@@ -15,7 +15,10 @@ import { BookUpdateComponent } from './book-update/book-update.component';
 import { AddbookComponent } from './addbook/addbook.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BookService } from './book/book.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormulaireComponent } from './formulaire/formulaire.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -29,12 +32,16 @@ import { FormsModule } from '@angular/forms';
     BookComponent,
     BookDetailComponent,
     BookUpdateComponent,
-    AddbookComponent
+    AddbookComponent,
+    FormulaireComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule
   ],
   providers: [AdService, BookService],
   entryComponents: [ HeroJobAdComponent, HeroProfileComponent ],
