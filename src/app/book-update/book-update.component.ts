@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from '../book/book.service';
 import { Book } from '../model/book';
+import { Router, ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-book-update',
@@ -14,9 +15,8 @@ export class BookUpdateComponent implements OnInit {
            private route: ActivatedRoute) {
   }
   ngOnInit() {
-       this.route.params
-        .switchMap((params: Params) => this.bookService.getBook(+params['book-id']))
-        .subscribe(book => this.book = book);
+      const params = +this.route.params['book-id'];
+      this.bookService.getBook(params).then(book => this.book = book);
   }
   update() {
      this.router.navigate([{ outlets: { bookPopup: null }}]);

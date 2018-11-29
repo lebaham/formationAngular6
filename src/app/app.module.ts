@@ -15,6 +15,7 @@ import { BookUpdateComponent } from './book-update/book-update.component';
 import { AddbookComponent } from './addbook/addbook.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BookService } from './book/book.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { BookService } from './book/book.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [AdService, BookService],
   entryComponents: [ HeroJobAdComponent, HeroProfileComponent ],

@@ -3,4 +3,4 @@
    <li *ngFor="let book of books | async" [@onOffTrigger] = "book.state" (click)="edit(book)"> 
 	   {{book.id}}. {{book.name}}
    </li>
-</ul>
+</ul> 

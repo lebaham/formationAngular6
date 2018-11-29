@@ -7,8 +7,8 @@
 
 <nav [ngClass] = "'parent-menu'">
 	  <ul>
-            <li><a routerLink="/book" routerLinkActive="active">Book</a></li>	  
-            <li><a [routerLink]="[{ outlets: { bookPopup: ['add-book'] } }]" routerLinkActive="active">Add Book</a></li>			 
+      <li><a routerLink="/book" routerLinkActive="active">Book</a></li>	  
+      <li><a [routerLink]="[{ outlets: { bookPopup: ['add-book'] } }]" routerLinkActive="active">Add Book</a></li>			 
 	    <li><a [routerLink]="[{ outlets: { bookList: ['book-detail'] } }]" routerLinkActive="active">Book Details</a></li>	
 	  </ul> 
 </nav>  
